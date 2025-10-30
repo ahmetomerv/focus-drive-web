@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusDrive - Drive Your Focus</title>
+  
+  <!-- Google tag (gtag.js) -->
+<!--   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXG8FHMTEK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WXG8FHMTEK'); -->
+  </script>
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="icon" href="assets/favicons/favicon.ico">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0b0c0f] text-gray-100 font-sans">
+  <!-- Navbar -->
+  <nav class="flex justify-center px-6 py-4 bg-transparent">
+    <div class="w-11/12 max-w-7xl flex items-center justify-between mx-auto">
+      <a href="index.html" class="inline-flex items-center gap-2 px-3 py-2 text-gray-200 hover:bg-gray-800/50 rounded-md transition-colors">
+        <img src="assets/logo.png" alt="FocusDrive Logo" class="w-10 h-10">
+        <span class="tracking-wide font-bold text-lg font-mono">FocusDrive</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="support.html" class="text-gray-400 hover:text-gray-200 transition-colors">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-[86vh] w-full relative py-16 text-center overflow-hidden">
+    <!-- Subtle grid + radial glows -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(63,63,70,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(63,63,70,0.15) 1px, transparent 1px), radial-gradient(circle 600px at 0% 20%, rgba(37,99,235,0.20), transparent 60%), radial-gradient(circle 600px at 100% 0%, rgba(59,130,246,0.18), transparent 60%); background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;"></div>
+    
+    <!-- Content -->
+    <div class="max-w-5xl mx-auto px-4 relative z-10">
+      <h1 class="font-mono font-extrabold text-white text-4xl md:text-6xl leading-tight tracking-tight mb-4">
+        Drive your focus.
+      </h1>
+      <p class="max-w-3xl mx-auto text-gray-300 text-base md:text-lg mb-2">
+        Plan a route, start a drive, and stay on task with real‑time progress on authentic journeys.
+      </p>
+      <div class="flex items-center justify-center gap-3 mt-12 mb-12">
+        <a href="" target="_blank" rel="noopener" class="inline-block hover:opacity-80 transition-opacity">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-10 md:h-12 w-auto">
+        </a>
+      </div>
+      <!-- App Screenshots -->
+      <div class="w-full flex items-center justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl">
+          <img src="assets/phone/home.png" alt="FocusDrive Homepage" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/onboarding.png', 'FocusDrive Onboarding View')">
+          <img src="assets/phone/destinations.png" alt="FocusDrive Destinations" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/home.png', 'FocusDrive Identification View')">
+          <img src="assets/phone/route.png" alt="FocusDrive Route" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/result.png', 'FocusDrive Result View')">
+          <img src="assets/phone/journey.png" alt="FocusDrive Journey" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/collection.png', 'FocusDrive Collection View')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 border-t border-gray-800/80">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="font-mono font-bold text-gray-100 text-2xl md:text-3xl">What you get</h2>
+        <p class="text-gray-400 text-sm md:text-base mt-2">Simple tools that help you focus.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
+            <div>
+              <h3 class="font-semibold text-gray-100">Pick a place</h3>
+              <p class="text-gray-400 text-sm mt-1">Choose a destination. We map the drive for your session.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-bullseye text-green-400 mt-1"></i>
+            <div>
+              <h3 class="font-semibold text-gray-100">Start your drive</h3>
+              <p class="text-gray-400 text-sm mt-1">Press start and work without distractions until you arrive.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-road text-yellow-300 mt-1"></i>
+            <div>
+              <h3 class="font-semibold text-gray-100">Real routes</h3>
+              <p class="text-gray-400 text-sm mt-1">Actual distances and times make progress feel real.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-map text-cyan-300 mt-1"></i>
+            <div>
+              <h3 class="font-semibold text-gray-100">Live map</h3>
+              <p class="text-gray-400 text-sm mt-1">Watch your drive move along the map in real time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-gauge text-purple-300 mt-1"></i>
+            <div>
+              <h3 class="font-semibold text-gray-100">Track your progress</h3>
+              <p class="text-gray-400 text-sm mt-1">See time, distance, and pace for every session.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-ticket text-pink-300 mt-1"></i>
+            <div>
+              <h3 class="font-semibold text-gray-100">Start free</h3>
+              <p class="text-gray-400 text-sm mt-1">Get 10 drives on us. Upgrade when you want unlimited.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-transparent border-t border-gray-800 mt-12 py-6">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
+      <div class="flex items-center space-x-4 text-sm text-gray-400 mb-1">
+        <a href="terms.html" class="hover:underline">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+        <a href="support.html" class="hover:underline">Support</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:underline" target="_blank" rel="noopener">Apple EULA</a>
+      </div>
+      <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2">
+        Made by <a href="https://ahmetomer.net/" class="hover:underline" target="_blank" rel="noopener">Ahmet Ömer</a> © 2025
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Phone Images -->
+  <div id="phoneModal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <img id="modalImage" class="modal-image" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    function openModal(imageSrc, imageAlt) {
+      const modal = document.getElementById('phoneModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      modalImage.src = imageSrc;
+      modalImage.alt = imageAlt;
+      modal.classList.add('show');
+      
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+      const modal = document.getElementById('phoneModal');
+      modal.classList.remove('show');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Close modal when clicking on backdrop
+    document.getElementById('phoneModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
