@@ -358,7 +358,7 @@
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:underline" target="_blank" rel="noopener">Apple EULA</a>
       </div>
       <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2">
-        Made by <a href="https://ahmeto.com/" class="hover:underline" target="_blank" rel="noopener">Ahmet Ömer</a> © 2025
+        Made by <a href="https://ahmeto.com/" class="hover:underline" target="_blank" rel="noopener">Ahmet Ömer</a> © <span id="current-year"></span>
       </div>
     </div>
   </footer>
@@ -376,6 +376,9 @@
         icon.classList.add('open');
       }
     }
+    
+    // Update year dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

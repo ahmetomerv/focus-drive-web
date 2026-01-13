@@ -27,120 +27,116 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#0b0c0f] text-gray-100 font-sans">
+<body class="bg-black text-white font-mono">
   <!-- Navbar -->
-  <nav class="flex justify-center px-6 py-4 bg-transparent">
+  <nav class="flex justify-center px-6 py-4 bg-black border-b border-gray-800">
     <div class="w-11/12 max-w-7xl flex items-center justify-between mx-auto">
-      <a href="index.html" class="inline-flex items-center gap-2 px-3 py-2 text-gray-200 hover:bg-gray-800/50 rounded-md transition-colors">
+      <a href="index.html" class="inline-flex items-center gap-2 px-3 py-2 text-white">
         <img src="assets/logo.png" alt="FocusDrive app logo - focus sessions through driving simulation" class="w-12 h-12 rounded-md">
-        <span class="tracking-wide font-bold text-lg font-mono">FocusDrive</span>
+        <span class="tracking-wide font-bold text-lg">FocusDrive</span>
       </a>
       <div class="hidden md:flex items-center gap-6 text-sm">
-        <a href="support.html" class="text-gray-400 hover:text-gray-200 transition-colors">Support</a>
+        <a href="support.html" class="text-gray-400 hover:text-white transition-colors">Support</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-[86vh] w-full relative py-16 text-center overflow-hidden">
-    <!-- Subtle grid + radial glows -->
-    <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(63,63,70,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(63,63,70,0.15) 1px, transparent 1px), radial-gradient(circle 600px at 0% 20%, rgba(37,99,235,0.20), transparent 60%), radial-gradient(circle 600px at 100% 0%, rgba(59,130,246,0.18), transparent 60%); background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;"></div>
-
+  <section class="min-h-[86vh] w-full relative py-20 text-center bg-black">
     <!-- Content -->
     <div class="max-w-5xl mx-auto px-4 relative z-10">
       <!-- Product Hunt Badge -->
-      <div class="flex items-center justify-center mb-10">
+      <div class="flex items-center justify-center mb-12">
         <a href="https://www.producthunt.com/products/focusdrive?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-focusdrive" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1035306&theme=neutral&t=1762596895299" alt="FocusDrive - Simulate&#0032;car&#0032;journey&#0032;routes&#0032;for&#0032;deep&#0032;focus&#0032;sessions | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
       </div>
 
-      <div class="rounded-xl overflow-hidden border border-gray-800 bg-cover bg-center bg-no-repeat mb-6" style="background-image: url('assets/card.jpeg');">
-        <div class="bg-black/40 p-8 md:p-12 text-center">
-          <h1 class="font-mono font-extrabold text-white text-4xl md:text-6xl leading-tight tracking-tight mb-4 mt-5">
-            Drive your focus.
-          </h1>
-          <p class="max-w-3xl mx-auto text-gray-300 text-base md:text-lg mb-2">
-            Plan a route, start a drive, and stay focused with simulated car journeys.
-          </p>
-          <div class="flex items-center justify-center gap-3 mt-20 mb-10">
-            <a href="https://apps.apple.com/us/app/focusdrive-focus-sessions/id6754540616" target="_blank" rel="noopener" class="inline-block hover:opacity-80 transition-opacity">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download FocusDrive on the App Store - Get the focus session app for iOS" class="h-12 md:h-14 w-auto">
-            </a>
-          </div>
+      <div class="mb-12">
+        <h1 class="font-bold text-white text-5xl md:text-7xl leading-tight tracking-tight mb-6">
+          Drive your focus.
+        </h1>
+        <p class="max-w-3xl mx-auto text-gray-400 text-base md:text-lg mb-8">
+          Plan a route, start a drive, and stay focused with simulated car journeys.
+        </p>
+        <div class="flex items-center justify-center gap-3 mt-12">
+          <a href="https://apps.apple.com/us/app/focusdrive-focus-sessions/id6754540616" target="_blank" rel="noopener" class="inline-block hover:opacity-80 transition-opacity">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download FocusDrive on the App Store - Get the focus session app for iOS" class="h-12 md:h-14 w-auto">
+          </a>
         </div>
       </div>
       <!-- App Screenshots -->
-      <div class="w-full flex items-center justify-center">
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl">
-          <img src="assets/phone/home.png" alt="FocusDrive app home screen showing main menu and navigation interface" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/home.png', 'FocusDrive Home View')">
-          <img src="assets/phone/destinations.png" alt="FocusDrive destinations screen showing available journey locations to choose from" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/destinations.png', 'FocusDrive Destinations View')">
-          <img src="assets/phone/route.png" alt="FocusDrive route planning screen displaying map with selected destination and driving route" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/route.png', 'FocusDrive Route View')">
-          <img src="assets/phone/journey.png" alt="FocusDrive active journey screen showing real-time progress tracking during focus session" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto ring-1 ring-gray-800" onclick="openModal('assets/phone/journey.png', 'FocusDrive Journey View')">
+      <div class="w-full flex items-center justify-center mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl">
+          <img src="assets/phone/home.png" alt="FocusDrive app home screen showing main menu and navigation interface" class="w-full h-auto phone-mockup-hover cursor-pointer max-w-xs mx-auto border border-gray-800" onclick="openModal('assets/phone/home.png', 'FocusDrive Home View')">
+          <img src="assets/phone/destinations.png" alt="FocusDrive destinations screen showing available journey locations to choose from" class="w-full h-auto phone-mockup-hover cursor-pointer max-w-xs mx-auto border border-gray-800" onclick="openModal('assets/phone/destinations.png', 'FocusDrive Destinations View')">
+          <img src="assets/phone/route.png" alt="FocusDrive route planning screen displaying map with selected destination and driving route" class="w-full h-auto phone-mockup-hover cursor-pointer max-w-xs mx-auto border border-gray-800" onclick="openModal('assets/phone/route.png', 'FocusDrive Route View')">
+          <img src="assets/phone/journey.png" alt="FocusDrive active journey screen showing real-time progress tracking during focus session" class="w-full h-auto phone-mockup-hover cursor-pointer max-w-xs mx-auto border border-gray-800" onclick="openModal('assets/phone/journey.png', 'FocusDrive Journey View')">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Features -->
-  <section id="features" class="py-16 border-t border-gray-800/80">
+  <section id="features" class="py-20 border-t border-gray-800 bg-black">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-10">
-        <h2 class="font-mono font-bold text-gray-100 text-2xl md:text-3xl">What you get</h2>
-        <p class="text-gray-400 text-sm md:text-base mt-2">Simple tools that help you focus.</p>
+      <div class="text-center mb-16">
+        <h2 class="font-bold text-white text-3xl md:text-4xl mb-3">What you get</h2>
+        <p class="text-gray-400 text-base md:text-lg">Simple tools that help you focus.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
+        <div class="border border-gray-800 bg-black p-6">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-location-dot text-white mt-1 text-lg"></i>
             <div>
-              <h3 class="font-semibold text-gray-100">Pick a place</h3>
-              <p class="text-gray-400 text-sm mt-1">Choose a destination. We map the drive for your session.</p>
+              <h3 class="font-semibold text-white mb-2">Pick a place</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">Choose a destination. We map the drive for your session.</p>
             </div>
           </div>
         </div>
-        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-bullseye text-green-400 mt-1"></i>
+        <div class="border border-gray-800 bg-black p-6">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-bullseye text-white mt-1 text-lg"></i>
             <div>
-              <h3 class="font-semibold text-gray-100">Start your drive</h3>
-              <p class="text-gray-400 text-sm mt-1">Press start and work without distractions until you arrive.</p>
+              <h3 class="font-semibold text-white mb-2">Start your drive</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">Press start and work without distractions until you arrive.</p>
             </div>
           </div>
         </div>
-        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-road text-yellow-300 mt-1"></i>
+        <div class="border border-gray-800 bg-black p-6">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-road text-white mt-1 text-lg"></i>
             <div>
-              <h3 class="font-semibold text-gray-100">Real routes</h3>
-              <p class="text-gray-400 text-sm mt-1">Actual distances and times make progress feel real.</p>
+              <h3 class="font-semibold text-white mb-2">Real routes</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">Actual distances and times make progress feel real.</p>
             </div>
           </div>
         </div>
-        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-map text-cyan-300 mt-1"></i>
+        <div class="border border-gray-800 bg-black p-6">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-map text-white mt-1 text-lg"></i>
             <div>
-              <h3 class="font-semibold text-gray-100">Live map</h3>
-              <p class="text-gray-400 text-sm mt-1">Watch your drive move along the map in real time.</p>
+              <h3 class="font-semibold text-white mb-2">Live map</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">Watch your drive move along the map in real time.</p>
             </div>
           </div>
         </div>
-        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-gauge text-purple-300 mt-1"></i>
+        <div class="border border-gray-800 bg-black p-6">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-gauge text-white mt-1 text-lg"></i>
             <div>
-              <h3 class="font-semibold text-gray-100">Track your progress</h3>
-              <p class="text-gray-400 text-sm mt-1">See details of your session history in detail.</p>
+              <h3 class="font-semibold text-white mb-2">Track your progress</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">See details of your session history in detail.</p>
             </div>
           </div>
         </div>
-        <div class="rounded-xl border border-gray-800 bg-[#0d0f13] p-5">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-ticket text-pink-300 mt-1"></i>
+        <div class="border border-gray-800 bg-black p-6">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-ticket text-white mt-1 text-lg"></i>
             <div>
-              <h3 class="font-semibold text-gray-100">Start free</h3>
-              <p class="text-gray-400 text-sm mt-1">Get 10 drives to try it out. Upgrade when you want unlimited.</p>
+              <h3 class="font-semibold text-white mb-2">Start free</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">Get 10 drives to try it out. Upgrade when you want unlimited.</p>
             </div>
           </div>
         </div>
@@ -149,17 +145,17 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-transparent border-t border-gray-800 mt-12 py-6">
-    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
-      <div class="flex items-center space-x-4 text-sm text-gray-400 mb-1">
-        <a href="terms.html" class="hover:underline">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:underline">Privacy Policy</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-        <a href="support.html" class="hover:underline">Support</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:underline" target="_blank" rel="noopener">Apple EULA</a>
+  <footer class="bg-black border-t border-gray-800 mt-16 py-8">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-3">
+      <div class="flex items-center space-x-6 text-sm text-gray-400">
+        <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:text-white transition-colors" target="_blank" rel="noopener">Apple EULA</a>
       </div>
-      <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2">
-        Made by <a href="https://ahmeto.com/" class="hover:underline" target="_blank" rel="noopener">Ahmet Ömer</a> © 2025
+      <div class="text-center text-xs text-gray-500 tracking-wide mt-2">
+        Made by <a href="https://ahmeto.com/" class="hover:text-white transition-colors" target="_blank" rel="noopener">Ahmet Ömer</a> © <span id="current-year"></span>
       </div>
     </div>
   </footer>
@@ -206,6 +202,9 @@
         closeModal();
       }
     });
+    
+    // Update year dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
