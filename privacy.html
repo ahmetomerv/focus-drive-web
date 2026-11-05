@@ -6,15 +6,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="FocusDrive Privacy Policy. Learn how we handle your location data, subscription information, and app usage. Your privacy is important to us." name="description"/>
 <title>Privacy Policy – FocusDrive</title>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X2QVTDG8WB"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-X2QVTDG8WB');
-  </script>
 <!-- Favicons -->
 <link href="assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="assets/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
@@ -26,7 +17,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="assets/styles.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><script defer="True" src="site.js"></script></head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><script defer="True" src="site.js"></script><script defer src="analytics.js"></script></head>
 <body class="document-page">
 <!-- Navbar -->
 <nav aria-label="Main navigation" class="site-nav">
@@ -41,14 +32,22 @@
 <main id="main-content"><section class="document-section">
 <div class="document">
 <h1>Privacy Policy</h1>
-<p>Effective Date: November 4, 2025</p>
+<p>Effective Date: November 5, 2026</p>
 <p><span class="emphasis">App Name</span>: FocusDrive</p>
 <p><span class="emphasis">Developer</span>: Ahmet Ömer</p>
 <hr/>
 <h2>Introduction</h2>
 <p>FocusDrive is a focus and simulation app. This policy describes our handling of your information.</p>
 <hr/>
-<h2>Information We Collect</h2>
+<h2 id="website-analytics">Optional Website Analytics</h2>
+<p>This section covers this website. The app disclosures below, including Firebase Analytics, apply separately to the FocusDrive app.</p>
+<p>Ahmet Ömer uses Umami at analytics.ahmeto.com to understand basic website pageviews and improve the website. Umami is self-hosted on the developer’s Hetzner server in Germany. Analytics data is retained indefinitely unless manually deleted.</p>
+<p>Only after you select “Allow analytics” do we load the tracker and send pageviews. Analytics is optional; declining does not affect access. Where the GDPR applies, our legal basis for website analytics is your consent under Article 6(1)(a).</p>
+<p>Pageview data includes the page path and title, referring page, browser language, screen size, and time of the visit. Query strings and fragments are excluded from both page addresses and referrers. The analytics server receives your IP address and browser user agent to process requests; Umami uses these to derive approximate location, browser, operating system, device type, and anonymous session identifiers. We do not configure custom events, user IDs, session recordings, or optional performance or error tracking. Umami’s tracker does not use cookies.</p>
+<p>We store your acceptance or rejection in this browser’s local storage under <code>focusdrive.umami-consent.v1</code>, with no automatic expiry, so we can remember your choice across pages and visits. A session-storage blocking flag is used to keep tracking off after declining or an unsuccessful save. These preferences are not sent as analytics data. Clearing browser storage removes your choice. If storage is unavailable, tracking stays blocked; your choice may not survive navigation or a later visit.</p>
+<p>Use “Analytics preferences” in any page’s footer to change your choice or withdraw by selecting “Decline”. Withdrawal stops future pageviews, including navigation tracking, and saved changes are shared across open tabs. Withdrawal does not undo processing already performed with your consent or automatically delete earlier analytics records.</p>
+<p>Where applicable, you may request access, correction, erasure, restriction, or portability of your personal data, and object to processing where that right applies. You may withdraw consent at any time without affecting the lawfulness of earlier processing, and lodge a complaint with a competent data protection authority. Contact <a href="mailto:hi@focusdriveapp.com">hi@focusdriveapp.com</a> to exercise your rights. Because we do not assign you a personal user ID for analytics, we may be unable to identify records relating to you.</p>
+<h2>App Information We Collect</h2>
 <h3>1. Location Data</h3>
 <ul>
 <li>Uses location services to plan routes</li>
@@ -154,7 +153,7 @@
 <ul>
 <li>Changes will be posted here</li>
 <li>Significant changes will be noted in app updates</li>
-<li>Continued use implies acceptance</li>
+<li>Continued use does not constitute consent to optional website analytics</li>
 </ul>
 <h2>Contact Us</h2>
 <ul>
@@ -166,17 +165,29 @@
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-links">
+<button aria-controls="analytics-banner" aria-expanded="false" class="footer-preferences" id="analytics-preferences" type="button">Analytics preferences</button>
 <a href="terms.html">Terms &amp; Conditions</a>
 <a href="privacy.html">Privacy Policy</a>
 <a href="contact.html">Contact</a>
 <a href="support.html">Support</a>
 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener noreferrer" target="_blank">Apple EULA</a>
 </div>
+<p class="analytics-status" id="analytics-status" role="status"></p>
 <div class="colophon">
         Made by <a href="https://ahmeto.com/" rel="noopener noreferrer" target="_blank">Ahmet Ömer</a> © <span id="current-year"></span>
 </div>
 </div>
 </footer>
 
+<section aria-labelledby="analytics-heading" class="analytics-banner" hidden id="analytics-banner">
+<div class="analytics-copy">
+<h2 id="analytics-heading">Optional analytics</h2>
+<p>Allow basic pageview analytics to help improve this website? Declining does not affect access. <a href="privacy.html#website-analytics">Privacy notice</a>.</p>
+</div>
+<div class="analytics-actions">
+<button class="analytics-choice analytics-allow" data-analytics-allow type="button">Allow analytics</button>
+<button class="analytics-choice" data-analytics-decline type="button">Decline</button>
+</div>
+</section>
 </body>
 </html>

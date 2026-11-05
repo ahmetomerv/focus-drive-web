@@ -6,15 +6,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Contact FocusDrive support. Have a question, feedback, or need help? Reach out to us and we'll get back to you within 48 hours." name="description"/>
 <title>Contact – FocusDrive</title>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X2QVTDG8WB"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-X2QVTDG8WB');
-  </script>
 <!-- Favicons -->
 <link href="assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="assets/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
@@ -26,7 +17,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="assets/styles.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><script defer="True" src="site.js"></script></head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><script defer="True" src="site.js"></script><script defer src="analytics.js"></script></head>
 <body class="document-page">
 <!-- Navbar -->
 <nav aria-label="Main navigation" class="site-nav">
@@ -49,17 +40,29 @@
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-links">
+<button aria-controls="analytics-banner" aria-expanded="false" class="footer-preferences" id="analytics-preferences" type="button">Analytics preferences</button>
 <a href="terms.html">Terms &amp; Conditions</a>
 <a href="privacy.html">Privacy Policy</a>
 <a href="contact.html">Contact</a>
 <a href="support.html">Support</a>
 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener noreferrer" target="_blank">Apple EULA</a>
 </div>
+<p class="analytics-status" id="analytics-status" role="status"></p>
 <div class="colophon">
         Made by <a href="https://ahmeto.com/" rel="noopener noreferrer" target="_blank">Ahmet Ömer</a> © <span id="current-year"></span>
 </div>
 </div>
 </footer>
 
+<section aria-labelledby="analytics-heading" class="analytics-banner" hidden id="analytics-banner">
+<div class="analytics-copy">
+<h2 id="analytics-heading">Optional analytics</h2>
+<p>Allow basic pageview analytics to help improve this website? Declining does not affect access. <a href="privacy.html#website-analytics">Privacy notice</a>.</p>
+</div>
+<div class="analytics-actions">
+<button class="analytics-choice analytics-allow" data-analytics-allow type="button">Allow analytics</button>
+<button class="analytics-choice" data-analytics-decline type="button">Decline</button>
+</div>
+</section>
 </body>
 </html>
