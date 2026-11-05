@@ -3,14 +3,18 @@
 Five static HTML pages share `assets/styles.css`, `site.js`, and `analytics.js`.
 No framework or production JavaScript dependencies are required.
 
-## Development and checks
+## Serving the site
 
-- `npm ci` installs browser test tooling (Node.js required).
-- `npx playwright install chromium` installs the test browser.
-- `npm run check` checks shared JavaScript syntax.
-- `npm test` runs consent regression tests in Chromium. Python 3 serves the site locally.
-- `npm run build` checks JavaScript and copies the production site to `dist/`.
-  Serve that directory with any static web server. Tests and development tools are excluded.
+Serve this folder with any static web server. No dependency installation or build
+step is required. Publish the five HTML pages, `assets/`, `site.js`, and
+`analytics.js`.
+
+Optional JavaScript syntax checks, if Node.js is available:
+
+```sh
+node --check site.js
+node --check analytics.js
+```
 
 ## Website analytics
 
@@ -36,12 +40,5 @@ The privacy notice at `privacy.html#website-analytics` covers the website separa
 from the existing iOS app disclosures. Analytics hosting is the developer's Hetzner
 server in Germany; analytics retention is indefinite unless manually deleted.
 
-## Analytics test isolation
-
-Tests intercept **all** requests to the analytics host, serve a local snapshot of
-the actual tracker, and fulfill collection requests locally. Test pageviews never
-reach production. `tests/fixtures/umami.js` was fetched from the configured script
-URL on 2026-11-05; refresh it deliberately when upgrading the hosted tracker and
-rerun the suite. Runtime configuration follows the
+Runtime configuration follows the
 [Umami tracker documentation](https://docs.umami.is/docs/tracker-configuration).
-The unversioned production script may change independently of this snapshot.
