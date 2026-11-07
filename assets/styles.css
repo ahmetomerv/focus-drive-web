@@ -54,6 +54,7 @@ p { color: var(--color-muted); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); }
 .brand { display: inline-flex; align-items: center; gap: var(--space-3); font-size: 1.125rem; font-weight: 600; letter-spacing: -.035em; text-decoration: none; }
 .brand img { width: 40px; height: 40px; border-radius: var(--radius); }
+.home-page .brand span { font-weight: 700; }
 .nav-inner > div { font-size: .875rem; }
 .nav-inner > div a { text-decoration: none; }
 .hero-inner { padding: var(--space-16) var(--page-gutter) 0; }
